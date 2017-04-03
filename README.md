@@ -4,7 +4,7 @@ Voici un petit programme GTK3/Python qui génère rapidement des appréciations 
 ## Description des fichiers
 bulletin : fichier éxécutable 
 
-main.py : fichier sources python 
+main.py : fichier source python 
 
 main.o : fichier main.py compilé avec Cython
 
