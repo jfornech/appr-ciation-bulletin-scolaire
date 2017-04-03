@@ -22,7 +22,7 @@ Author: Jean-François Ornech
 
 -->
 <interface>
-  <requires lib="gtk+" version="3.12"/>
+  <requires lib="gtk+" version="3.10"/>
   <!-- interface-license-type lgplv3 -->
   <!-- interface-name Appr\303\251ciation bulletin scolaire -->
   <!-- interface-authors Jean-Fran\303\247ois Ornech -->
