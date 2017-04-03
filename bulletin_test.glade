@@ -1,54 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
+<!-- Generated with glade 3.18.3 
+
+Copyright (C) 
+
+This file is part of Appréciation bulletin scolaire.
+
+Appréciation bulletin scolaire is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Appréciation bulletin scolaire is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with Appréciation bulletin scolaire.  If not, see <http://www.gnu.org/licenses/>.
+
+Author: Jean-François Ornech
+
+-->
 <interface>
   <requires lib="gtk+" version="3.12"/>
+  <!-- interface-license-type lgplv3 -->
+  <!-- interface-name Appr\303\251ciation bulletin scolaire -->
+  <!-- interface-authors Jean-Fran\303\247ois Ornech -->
+  <object class="GtkAboutDialog" id="aboutdialog">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Appréciation bulletin</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="default_width">320</property>
+    <property name="default_height">260</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="type_hint">dialog</property>
+    <property name="program_name">Appréciation bulletin scolaire</property>
+    <property name="version">Version (alpha) : 0.1</property>
+    <property name="comments" translatable="yes">Ce logiciel est destiné aux enseignants . Il permet de construire une appréciation de l'élève en fonction de plusieurs paramètres . </property>
+    <property name="website">https://github.com/jfornech/appr-ciation-bulletin-scolaire</property>
+    <property name="website_label" translatable="yes">mise à jour sur github</property>
+    <property name="authors">Jean-François Ornech</property>
+    <property name="logo_icon_name">text-x-script</property>
+    <property name="license_type">gpl-2-0</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="aboutdialog-vbox1">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="aboutdialog-action_area1">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkWindow" id="window1">
+    <property name="width_request">452</property>
+    <property name="height_request">300</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Appréciation bulletin scolaire</property>
+    <property name="window_position">center</property>
+    <property name="default_width">-1</property>
+    <property name="default_height">-1</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="urgency_hint">True</property>
+    <property name="has_resize_grip">True</property>
     <child>
       <object class="GtkBox" id="box1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkGrid" id="grid2">
+          <object class="GtkLabel" id="label1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_left">10</property>
-            <property name="margin_right">10</property>
-            <property name="margin_top">6</property>
-            <property name="margin_bottom">6</property>
-            <property name="hexpand">True</property>
-            <child>
-              <object class="GtkLabel" id="label1">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Nom de l'élève </property>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="nom_eleve">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="margin_left">10</property>
-                <property name="hexpand">True</property>
-                <property name="primary_icon_stock">gtk-orientation-portrait</property>
-                <property name="placeholder_text" translatable="yes">Saisir le nom de l'élève</property>
-                <property name="input_purpose">name</property>
-                <signal name="changed" handler="nom_eleve_changed" swapped="no"/>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
+            <property name="xpad">15</property>
+            <property name="ypad">2</property>
+            <property name="label" translatable="yes">
+Cochez les cases correspodantes à l'appréciation que vous souhaitez constuire. Lorsque vous avez terminez, sélectionner le texte qui est apparu en bas, et copier le dans votre bulletin.
+</property>
+            <property name="justify">fill</property>
+            <property name="wrap">True</property>
+            <property name="width_chars">40</property>
+            <property name="max_width_chars">40</property>
+            <property name="track_visited_links">False</property>
+            <property name="xalign">1</property>
+            <property name="yalign">0.87000000476837158</property>
+            <attributes>
+              <attribute name="font-desc" value="Arial Bold Italic 12"/>
+            </attributes>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
@@ -89,7 +143,6 @@
                             <property name="yalign">0.49000000953674316</property>
                             <property name="active">True</property>
                             <property name="draw_indicator">True</property>
-                            <property name="group">radiobutton3</property>
                             <signal name="clicked" handler="on_checkbutton_trimestre_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -200,7 +253,7 @@
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
-                            <property name="group">radiobutton3</property>
+                            <property name="group">radiobutton1</property>
                             <signal name="clicked" handler="on_checkbutton_trimestre_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -313,7 +366,6 @@
               <object class="GtkFrame" id="frame_trimestre1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="valign">end</property>
                 <property name="margin_left">5</property>
                 <property name="margin_right">5</property>
                 <property name="margin_top">5</property>
@@ -321,19 +373,21 @@
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="label_xalign">0</property>
+                <property name="label_yalign">0.51999998092651367</property>
+                <property name="shadow_type">in</property>
                 <child>
                   <object class="GtkBox" id="box2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkAlignment" id="alignment1">
+                      <object class="GtkAlignment" id="alignment4">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_comportment">
-                            <property name="label" translatable="yes">tes</property>
+                          <object class="GtkRadioButton" id="checkbutton_travail_1">
+                            <property name="label" translatable="yes">travail sérieux</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -350,18 +404,19 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkAlignment" id="alignment2">
+                      <object class="GtkAlignment" id="alignment10">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_comportment2">
-                            <property name="label" translatable="yes">test</property>
+                          <object class="GtkRadioButton" id="checkbutton_travail_2">
+                            <property name="label" translatable="yes">travail correct</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_travail_1</property>
                             <signal name="clicked" handler="on_checkbutton_travail_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -373,18 +428,19 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkAlignment" id="alignment3">
+                      <object class="GtkAlignment" id="alignment11">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_comportment3">
-                            <property name="label" translatable="yes">pas assez de sérieux</property>
+                          <object class="GtkRadioButton" id="checkbutton_travail_3">
+                            <property name="label" translatable="yes">travail irrégulier</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_travail_1</property>
                             <signal name="clicked" handler="on_checkbutton_travail_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -396,18 +452,19 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkAlignment" id="alignment4">
+                      <object class="GtkAlignment" id="alignment24">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_comportment4">
-                            <property name="label" translatable="yes">test</property>
+                          <object class="GtkRadioButton" id="checkbutton_travail_4">
+                            <property name="label" translatable="yes">trop peu de travail</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_travail_1</property>
                             <signal name="clicked" handler="on_checkbutton_travail_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -417,6 +474,36 @@
                         <property name="fill">True</property>
                         <property name="position">3</property>
                       </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAlignment" id="alignment2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkRadioButton" id="checkbutton_travail_5">
+                            <property name="label" translatable="yes">ne travail peu ou pas</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_travail_1</property>
+                            <signal name="clicked" handler="on_checkbutton_travail_clicked" swapped="no"/>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
                     </child>
                   </object>
                 </child>
@@ -443,26 +530,27 @@
                 <property name="margin_bottom">5</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="label_xalign">0</property>
+                <property name="label_xalign">0.0099999997764825821</property>
+                <property name="label_yalign">0.70999997854232788</property>
                 <child>
                   <object class="GtkBox" id="box3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkAlignment" id="alignment9">
+                      <object class="GtkAlignment" id="alignment12">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_excellent2">
+                          <object class="GtkRadioButton" id="checkbutton_investissement_1">
                             <property name="label" translatable="yes">s'investit sérieusement</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
-                            <signal name="clicked" handler="on_checkbutton_travail_clicked" swapped="no"/>
+                            <signal name="clicked" handler="on_checkbutton_investissement_clicked" swapped="no"/>
                           </object>
                         </child>
                       </object>
@@ -473,18 +561,19 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkAlignment" id="alignment10">
+                      <object class="GtkAlignment" id="alignment9">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_bon2">
-                            <property name="label" translatable="yes">s'investit peu</property>
+                          <object class="GtkRadioButton" id="checkbutton_investissement_4">
+                            <property name="label" translatable="yes">s'investit correctement</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_investissement_1</property>
                             <signal name="clicked" handler="on_checkbutton_investissement_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -496,18 +585,19 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkAlignment" id="alignment11">
+                      <object class="GtkAlignment" id="alignment1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_moyen2">
-                            <property name="label" translatable="yes">ne s'investit pas du tout</property>
+                          <object class="GtkRadioButton" id="checkbutton_investissement_5">
+                            <property name="label" translatable="yes">s'investit timidement</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_investissement_1</property>
                             <signal name="clicked" handler="on_checkbutton_investissement_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -519,18 +609,19 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkAlignment" id="alignment12">
+                      <object class="GtkAlignment" id="alignment22">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_faible2">
-                            <property name="label" translatable="yes">test</property>
+                          <object class="GtkRadioButton" id="checkbutton_investissement_2">
+                            <property name="label" translatable="yes">s'investit trop peu</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
                             <property name="xalign">0</property>
                             <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_investissement_1</property>
                             <signal name="clicked" handler="on_checkbutton_investissement_clicked" swapped="no"/>
                           </object>
                         </child>
@@ -540,6 +631,33 @@
                         <property name="fill">True</property>
                         <property name="position">3</property>
                       </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAlignment" id="alignment23">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkRadioButton" id="checkbutton_investissement_3">
+                            <property name="label" translatable="yes">a désinvestit la matière</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">checkbutton_investissement_1</property>
+                            <signal name="clicked" handler="on_checkbutton_investissement_clicked" swapped="no"/>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
                     </child>
                   </object>
                 </child>
@@ -556,11 +674,21 @@
                 <property name="top_attach">0</property>
               </packing>
             </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid" id="grid4">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
             <child>
               <object class="GtkFrame" id="frame_attitude">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="valign">end</property>
                 <property name="margin_left">5</property>
                 <property name="margin_right">10</property>
                 <property name="margin_top">5</property>
@@ -568,6 +696,7 @@
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="label_xalign">0</property>
+                <property name="shadow_type">in</property>
                 <child>
                   <object class="GtkBox" id="box5">
                     <property name="visible">True</property>
@@ -579,8 +708,8 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_comportment1">
-                            <property name="label" translatable="yes">trop de bavardages</property>
+                          <object class="GtkCheckButton" id="checkbutton_comportment_bavardages">
+                            <property name="label" translatable="yes">bavardages</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -602,8 +731,8 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_bon4">
-                            <property name="label" translatable="yes">beaucoup d'interventions intempestives</property>
+                          <object class="GtkCheckButton" id="checkbutton_comportment_agitation">
+                            <property name="label" translatable="yes">agitation</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -625,8 +754,8 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_moyen4">
-                            <property name="label" translatable="yes">Attitude incorrect en classe</property>
+                          <object class="GtkCheckButton" id="checkbutton_trimestre_att_incorret">
+                            <property name="label" translatable="yes">attitude incorrect en classe</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -648,8 +777,8 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkCheckButton" id="checkbutton_trimestre_faible4">
-                            <property name="label" translatable="yes">test</property>
+                          <object class="GtkCheckButton" id="checkbutton_comportment_pasdeffort">
+                            <property name="label" translatable="yes">aucun effort</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">False</property>
@@ -665,18 +794,242 @@
                         <property name="position">3</property>
                       </packing>
                     </child>
+                    <child>
+                      <object class="GtkAlignment" id="alignment3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkCheckButton" id="checkbutton_comportment_perturbe">
+                            <property name="label" translatable="yes">perturbe la classe</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <signal name="clicked" handler="on_checkbutton_comportement_clicked" swapped="no"/>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkAlignment" id="alignment25">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
+                        <child>
+                          <object class="GtkCheckButton" id="checkbutton_comportment_interventions">
+                            <property name="label" translatable="yes">interventions intempestives</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <signal name="clicked" handler="on_checkbutton_comportement_clicked" swapped="no"/>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
                   </object>
                 </child>
                 <child type="label">
                   <object class="GtkLabel" id="label4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
                     <property name="label" translatable="yes">Comportement</property>
                   </object>
                 </child>
               </object>
               <packing>
-                <property name="left_attach">2</property>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFrame" id="conseils">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_left">10</property>
+                <property name="margin_right">10</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="label_xalign">0</property>
+                <property name="shadow_type">in</property>
+                <child>
+                  <object class="GtkAlignment" id="alignment21">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="left_padding">12</property>
+                    <child>
+                      <object class="GtkBox" id="box7">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils1">
+                            <property name="label" translatable="yes">Poursuivez vos efforts.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils2</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils2">
+                            <property name="label" translatable="yes">Ne vous découragez pas.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils3">
+                            <property name="label" translatable="yes">Continuez ainsi.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils4">
+                            <property name="label" translatable="yes">Participez plus à l'oral.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils5">
+                            <property name="label" translatable="yes">Travaillez davantage en classe et à la maison.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils6">
+                            <property name="label" translatable="yes">Soyez plus rigoureux.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.51999998092651367</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils7">
+                            <property name="label" translatable="yes">Ne relâchez pas vos efforts.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="conseils8">
+                            <property name="label" translatable="yes">Félicitations.</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">False</property>
+                            <property name="xalign">0</property>
+                            <property name="draw_indicator">True</property>
+                            <property name="group">conseils1</property>
+                            <signal name="clicked" handler="on_conseils_clicked" swapped="no"/>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">7</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="label">
+                  <object class="GtkLabel" id="label5">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Conseils</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
                 <property name="top_attach">0</property>
               </packing>
             </child>
@@ -684,7 +1037,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">2</property>
+            <property name="position">3</property>
           </packing>
         </child>
         <child>
@@ -695,7 +1048,40 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">3</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid" id="grid2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">end</property>
+            <child>
+              <object class="GtkButton" id="button_quitter">
+                <property name="label" translatable="yes">Quitter</property>
+                <property name="width_request">100</property>
+                <property name="visible">True</property>
+                <property name="app_paintable">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_left">5</property>
+                <property name="margin_right">5</property>
+                <property name="margin_top">5</property>
+                <property name="margin_bottom">5</property>
+                <property name="image_position">right</property>
+                <signal name="clicked" handler="on_quitter" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack_type">end</property>
+            <property name="position">5</property>
           </packing>
         </child>
       </object>
