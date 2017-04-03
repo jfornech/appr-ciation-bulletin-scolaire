@@ -2,7 +2,7 @@
 Voici un petit programme GTK3/Python qui génère rapidement des appréciations pour les bulletins scolaires. C'est une version de test pour l'instant.
 
 ## Description des fichiers
-bulletin : fichier éxécutable 
+bulletin : fichier éxécutable linux
 
 main.py : fichier source python 
 
