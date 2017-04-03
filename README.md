@@ -13,6 +13,14 @@ main.o : fichier main.py compilé avec Cython
 
 et pour finit le fichier glade, si mon interface ne vous plait pas.
 
+## Installation
+Il y a tellement peu de chance que mon fichier compilé corresponde à votre version de python qu'il faudra que vous le recompilier vous même. Pour cela faire la commande :
+Avant de Copier/Coller la commande, vérifier que vous avez bien le répoertoire usr/include/python3.4m. Si ce n'est pas le cas modifier la commande en fonction de votre version de Python.
+
+gcc -Os -I /usr/include/python3.4m  main.c -o bulletin-python3.14 -lpython3.4m -lpthread -lm -lutil -ldl
+
+
+
 ## Todo
 - ajouter le nom de l'élève automatiquement 
 - tester plus intelligement les choix et afficher une ponctuation plus cohérente afin ne plus avoir ce genre de chose ",,,."
