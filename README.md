@@ -1,5 +1,6 @@
 # Appréciation bulletin scolaire
 Voici un petit programme GTK3/Python qui génère rapidement des appréciations pour les bulletins scolaires. C'est une version de test pour l'instant.
+https://cloud.githubusercontent.com/assets/17165459/24595602/5f456abc-1838-11e7-9048-fddfc7859676.png
 
 ## Description des fichiers
 bulletin : fichier éxécutable linux
